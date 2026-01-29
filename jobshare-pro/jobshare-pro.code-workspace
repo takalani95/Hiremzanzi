@@ -1,0 +1,74 @@
+{
+  "folders": [
+    {
+      "name": "🚀 JobShare Pro (Root)",
+      "path": "."
+    },
+    {
+      "name": "🖥️ Backend (Node.js API)",
+      "path": "./backend"
+    },
+    {
+      "name": "🎨 Frontend (React App)",
+      "path": "./frontend"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/package-lock.json": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/build": true
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on"
+  },
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "dsznajder.es7-react-js-snippets",
+      "mongodb.mongodb-vscode",
+      "christian-kohler.npm-intellisense",
+      "rangav.vscode-thunder-client"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "🖥️ Launch Backend",
+        "skipFiles": ["<node_internals>/**"],
+        "program": "${workspaceFolder:🖥️ Backend (Node.js API)}/server.js",
+        "cwd": "${workspaceFolder:🖥️ Backend (Node.js API)}",
+        "restart": true,
+        "console": "integratedTerminal"
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "🚀 Start Full Stack",
+        "type": "shell",
+        "command": "npm run dev",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
+}
